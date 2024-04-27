@@ -20,7 +20,7 @@ app.use("",adminrouter)
 app.use("",userrrouter) // it includes user routes
 
 
-const port = 2032
+const port = process.env.PORT
 app.listen(port,()=>{
     console.log(`Server is running at port ${port}`)
 })
