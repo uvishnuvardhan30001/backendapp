@@ -2,9 +2,17 @@ const express = require("express")
 const mongoose = require("mongoose")
 const cors = require("cors")
 
-const dburl = process.env.mongourl
-mongoose.connect(dburl).then(() => {
-    console.log("Connected to DB Successfully")
+// const dburl = process.env.mongourl
+// mongoose.connect(dburl).then(() => {
+//     console.log("Connected to DB Successfully")
+// }).catch((err) => {
+//     console.log(err.message)
+// });
+
+//MongoDB Atlas Connection
+const dburl = "mongodb+srv://admin:admin@cluster0.3egp3up.mongodb.net/musicapi?retryWrites=true&w=majority"
+mongoogse.connect(dburl).then(() => {
+    console.log("Connected to MongoDB Atlas Successfully")
 }).catch((err) => {
     console.log(err.message)
 });
